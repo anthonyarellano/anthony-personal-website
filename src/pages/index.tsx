@@ -205,7 +205,7 @@ export default function Home() {
             Software Engineer
           </h2> */}
         </div>
-        <div className="fixed bottom-5 flex gap-5">
+        <div className="fixed bottom-5 flex gap-2 sm:gap-5">
           <div
             onClick={() => handleScroll(tileRef1)}
             className={`cursor-pointer text-sm ${
