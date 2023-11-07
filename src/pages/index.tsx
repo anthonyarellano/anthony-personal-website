@@ -8,12 +8,12 @@ export default function Home() {
   const [flip, setFlip] = React.useState(false);
   const [inView, setInView] = React.useState<string>();
 
-  const tileRef1 = React.useRef<HTMLElement>(null);
-  const tileRef2 = React.useRef<HTMLElement>(null);
-  const tileRef3 = React.useRef<HTMLElement>(null);
-  const tileRef4 = React.useRef<HTMLElement>(null);
-  const tileRef5 = React.useRef<HTMLElement>(null);
-  const tileRef6 = React.useRef<HTMLElement>(null);
+  const tileRef1 = React.useRef<HTMLDivElement>(null);
+  const tileRef2 = React.useRef<HTMLDivElement>(null);
+  const tileRef3 = React.useRef<HTMLDivElement>(null);
+  const tileRef4 = React.useRef<HTMLDivElement>(null);
+  const tileRef5 = React.useRef<HTMLDivElement>(null);
+  const tileRef6 = React.useRef<HTMLDivElement>(null);
 
   const elementsToObserve = [
     "tile-1",
@@ -24,7 +24,7 @@ export default function Home() {
     "tile-6",
   ];
 
-  const handleScroll = (ref: RefObject<HTMLElement>) => {
+  const handleScroll = (ref: RefObject<HTMLDivElement>) => {
     if (ref.current?.offsetTop) {
       window.scrollTo(0, ref.current.offsetTop);
     } else {
