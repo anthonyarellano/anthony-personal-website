@@ -1,12 +1,18 @@
-import React from "react";
+import React, { RefObject } from "react";
 import Head from "next/head";
 import GitHubIcon from "~/icons/Github";
-import LinkedinIcon from "~/icons/Linkedin";
 import SpotifyIcon from "~/icons/Spotify";
+import LinkedinIcon from "~/icons/Linkedin";
 
 export default function Home() {
   const [flip, setFlip] = React.useState(false);
   const [inView, setInView] = React.useState<string>();
+  const tileRef1 = React.useRef<HTMLElement>(null);
+  const tileRef2 = React.useRef<HTMLElement>(null);
+  const tileRef3 = React.useRef<HTMLElement>(null);
+  const tileRef4 = React.useRef<HTMLElement>(null);
+  const tileRef5 = React.useRef<HTMLElement>(null);
+  const tileRef6 = React.useRef<HTMLElement>(null);
 
   const elementsToObserve = [
     "tile-1",
@@ -16,6 +22,14 @@ export default function Home() {
     "tile-5",
     "tile-6",
   ];
+
+  const handleScroll = (ref: RefObject<HTMLElement>) => {
+    if (ref.current?.offsetTop) {
+      window.scrollTo(0, ref.current.offsetTop);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  };
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
@@ -67,6 +81,7 @@ export default function Home() {
       >
         <div
           id="tile-1"
+          ref={tileRef1}
           className="container flex  h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
@@ -91,6 +106,7 @@ export default function Home() {
         </div>
         <div
           id="tile-2"
+          ref={tileRef2}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
@@ -110,6 +126,7 @@ export default function Home() {
         </div>
         <div
           id="tile-3"
+          ref={tileRef3}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
@@ -129,6 +146,7 @@ export default function Home() {
         </div>
         <div
           id="tile-4"
+          ref={tileRef4}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
@@ -148,6 +166,7 @@ export default function Home() {
         </div>
         <div
           id="tile-5"
+          ref={tileRef5}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
@@ -167,6 +186,7 @@ export default function Home() {
         </div>
         <div
           id="tile-6"
+          ref={tileRef6}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
@@ -186,6 +206,7 @@ export default function Home() {
         </div>
         <div className="fixed bottom-5 flex gap-5">
           <div
+            onClick={() => handleScroll(tileRef1)}
             className={`und cursor-pointer ${
               inView === "tile-1" ? "underline" : ""
             }`}
@@ -193,6 +214,7 @@ export default function Home() {
             Home
           </div>
           <div
+            onClick={() => handleScroll(tileRef2)}
             className={` cursor-pointer ${
               inView === "tile-2" ? "underline" : ""
             }`}
@@ -200,6 +222,7 @@ export default function Home() {
             About
           </div>
           <div
+            onClick={() => handleScroll(tileRef3)}
             className={`cursor-pointer ${
               inView === "tile-3" ? "underline" : ""
             }`}
@@ -207,6 +230,7 @@ export default function Home() {
             Projects
           </div>
           <div
+            onClick={() => handleScroll(tileRef4)}
             className={`cursor-pointer ${
               inView === "tile-4" ? "underline" : ""
             }`}
@@ -214,6 +238,7 @@ export default function Home() {
             Music
           </div>
           <div
+            onClick={() => handleScroll(tileRef5)}
             className={`cursor-pointer ${
               inView === "tile-5" ? "underline" : ""
             }`}
@@ -221,6 +246,7 @@ export default function Home() {
             Resume
           </div>
           <div
+            onClick={() => handleScroll(tileRef6)}
             className={`cursor-pointer ${
               inView === "tile-6" ? "underline" : ""
             }`}
