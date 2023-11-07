@@ -83,8 +83,8 @@ export default function Home() {
           >
             Software Engineer
           </h2>
-          <div className="flex gap-2">
-            <GitHubIcon />
+          <div className={`flex gap-2 ${flip && "opacity-0"}`}>
+            <GitHubIcon color="black" />
             <LinkedinIcon />
             <SpotifyIcon />
           </div>
