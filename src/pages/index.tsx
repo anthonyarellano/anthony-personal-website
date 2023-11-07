@@ -1,22 +1,55 @@
-import Head from "next/head";
 import React from "react";
+import Head from "next/head";
 
 export default function Home() {
   const [flip, setFlip] = React.useState(false);
-  const [scrollY, setScrollY] = React.useState(0);
+  const [inView, setInView] = React.useState<string>();
+
+  const elementsToObserve = [
+    "tile-1",
+    "tile-2",
+    "tile-3",
+    "tile-4",
+    "tile-5",
+    "tile-6",
+  ];
+
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      const elementId: string = entry.target.id;
+      const isIntersecting = entry.isIntersecting;
+      if (isIntersecting) {
+        setInView(elementId);
+      }
+    });
+  };
 
   React.useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    elementsToObserve.forEach((elementId) => {
+      const element = document.getElementById(elementId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      elementsToObserve.forEach((elementId) => {
+        const element = document.getElementById(elementId);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
     };
-  }, []);
-  console.log(scrollY);
+  }, [elementsToObserve]);
+
   return (
     <>
       <Head>
@@ -29,7 +62,10 @@ export default function Home() {
           flip ? "bg-black text-white" : "bg-white"
         } `}
       >
-        <div className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16">
+        <div
+          id="tile-1"
+          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+        >
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
@@ -45,7 +81,10 @@ export default function Home() {
             Software Engineer
           </h2>
         </div>
-        <div className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16">
+        <div
+          id="tile-2"
+          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+        >
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
@@ -61,7 +100,10 @@ export default function Home() {
             Software Engineer
           </h2> */}
         </div>
-        <div className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16">
+        <div
+          id="tile-3"
+          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+        >
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
@@ -77,7 +119,10 @@ export default function Home() {
             Software Engineer
           </h2> */}
         </div>
-        <div className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16">
+        <div
+          id="tile-4"
+          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+        >
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
@@ -93,31 +138,87 @@ export default function Home() {
             Software Engineer
           </h2> */}
         </div>
+        <div
+          id="tile-5"
+          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+        >
+          <h1
+            onMouseEnter={() => setFlip(true)}
+            onMouseLeave={() => setFlip(false)}
+            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+          >
+            Resume
+          </h1>
+          {/* <h2
+            onMouseEnter={() => setFlip(true)}
+            onMouseLeave={() => setFlip(false)}
+            className="xyz text-4xl font-extrabold"
+          >
+            Software Engineer
+          </h2> */}
+        </div>
+        <div
+          id="tile-6"
+          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+        >
+          <h1
+            onMouseEnter={() => setFlip(true)}
+            onMouseLeave={() => setFlip(false)}
+            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+          >
+            Contact
+          </h1>
+          {/* <h2
+            onMouseEnter={() => setFlip(true)}
+            onMouseLeave={() => setFlip(false)}
+            className="xyz text-4xl font-extrabold"
+          >
+            Software Engineer
+          </h2> */}
+        </div>
         <div className="fixed bottom-5 flex gap-5">
           <div
             className={`und cursor-pointer ${
-              scrollY >= 0 && scrollY < 955 ? "underline" : ""
+              inView === "tile-1" ? "underline" : ""
             }`}
           >
             Home
           </div>
           <div
             className={` cursor-pointer ${
-              scrollY >= 955 && scrollY < 1910 ? "underline" : ""
+              inView === "tile-2" ? "underline" : ""
             }`}
           >
             About
           </div>
           <div
             className={`cursor-pointer ${
-              scrollY >= 1910 && scrollY < 2865 ? "underline" : ""
+              inView === "tile-3" ? "underline" : ""
             }`}
           >
             Projects
           </div>
-          <div className={`cursor-pointer`}>Music</div>
-          <div className={`cursor-pointer`}>Resume</div>
-          <div className={`cursor-pointer`}>Contact</div>
+          <div
+            className={`cursor-pointer ${
+              inView === "tile-4" ? "underline" : ""
+            }`}
+          >
+            Music
+          </div>
+          <div
+            className={`cursor-pointer ${
+              inView === "tile-5" ? "underline" : ""
+            }`}
+          >
+            Resume
+          </div>
+          <div
+            className={`cursor-pointer ${
+              inView === "tile-6" ? "underline" : ""
+            }`}
+          >
+            Contact
+          </div>
         </div>
       </main>
     </>
