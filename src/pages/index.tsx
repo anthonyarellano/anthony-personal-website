@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Anthony Aellano</title>
+        <title>Anthony Arellano</title>
         <meta name="description" content="Anthony Arellano's Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
