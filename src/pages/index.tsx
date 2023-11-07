@@ -1,5 +1,8 @@
 import React from "react";
 import Head from "next/head";
+import GitHubIcon from "~/icons/Github";
+import LinkedinIcon from "~/icons/Linkedin";
+import SpotifyIcon from "~/icons/Spotify";
 
 export default function Home() {
   const [flip, setFlip] = React.useState(false);
@@ -64,22 +67,27 @@ export default function Home() {
       >
         <div
           id="tile-1"
-          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex  h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="xyz cursor-pointer text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             Anthony Arellano
           </h1>
           <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-4xl font-extrabold"
+            className="xyz cursor-pointer text-4xl font-extrabold"
           >
             Software Engineer
           </h2>
+          <div className="flex gap-2">
+            <GitHubIcon />
+            <LinkedinIcon />
+            <SpotifyIcon />
+          </div>
         </div>
         <div
           id="tile-2"
