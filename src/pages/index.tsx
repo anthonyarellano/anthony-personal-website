@@ -208,48 +208,48 @@ export default function Home() {
         <div className="fixed bottom-5 flex gap-5">
           <div
             onClick={() => handleScroll(tileRef1)}
-            className={`und cursor-pointer ${
-              inView === "tile-1" ? "underline" : ""
+            className={`cursor-pointer text-sm ${
+              inView === "tile-1" ? "font-bold underline" : ""
             }`}
           >
             Home
           </div>
           <div
             onClick={() => handleScroll(tileRef2)}
-            className={` cursor-pointer ${
-              inView === "tile-2" ? "underline" : ""
+            className={`cursor-pointer text-sm ${
+              inView === "tile-2" ? "font-bold underline" : ""
             }`}
           >
             About
           </div>
           <div
             onClick={() => handleScroll(tileRef3)}
-            className={`cursor-pointer ${
-              inView === "tile-3" ? "underline" : ""
+            className={`cursor-pointer text-sm ${
+              inView === "tile-3" ? "font-bold underline" : ""
             }`}
           >
             Projects
           </div>
           <div
             onClick={() => handleScroll(tileRef4)}
-            className={`cursor-pointer ${
-              inView === "tile-4" ? "underline" : ""
+            className={`cursor-pointer text-sm ${
+              inView === "tile-4" ? "font-bold underline" : ""
             }`}
           >
             Music
           </div>
           <div
             onClick={() => handleScroll(tileRef5)}
-            className={`cursor-pointer ${
-              inView === "tile-5" ? "underline" : ""
+            className={`cursor-pointer text-sm ${
+              inView === "tile-5" ? "font-bold underline" : ""
             }`}
           >
             Resume
           </div>
           <div
             onClick={() => handleScroll(tileRef6)}
-            className={`cursor-pointer ${
-              inView === "tile-6" ? "underline" : ""
+            className={`cursor-pointer text-sm ${
+              inView === "tile-6" ? "font-bold underline" : ""
             }`}
           >
             Contact
