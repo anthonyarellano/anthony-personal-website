@@ -7,6 +7,7 @@ import LinkedinIcon from "~/icons/Linkedin";
 export default function Home() {
   const [flip, setFlip] = React.useState(false);
   const [inView, setInView] = React.useState<string>();
+
   const tileRef1 = React.useRef<HTMLElement>(null);
   const tileRef2 = React.useRef<HTMLElement>(null);
   const tileRef3 = React.useRef<HTMLElement>(null);
