@@ -87,10 +87,10 @@ export default function Home() {
           ref={tileRef1}
           className="z-50 flex h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1 className="cursor-pointer text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
+          <h1 className="cursor-pointer text-center text-[5rem] font-extrabold tracking-tight text-white sm:text-[5rem]">
             Anthony Arellano
           </h1>
-          <h2 className="cursor-pointer text-4xl font-extrabold text-white">
+          <h2 className="cursor-pointer text-center text-4xl font-extrabold text-white">
             Software Engineer
           </h2>
           <div className={`flex gap-2`}>
