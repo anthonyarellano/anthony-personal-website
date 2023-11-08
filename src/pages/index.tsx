@@ -1,5 +1,6 @@
-import React, { RefObject } from "react";
+import React from "react";
 import Head from "next/head";
+import Stars from "~/components/Stars/Stars";
 import GitHubIcon from "~/icons/Github";
 import SpotifyIcon from "~/icons/Spotify";
 import LinkedinIcon from "~/icons/Linkedin";
@@ -24,7 +25,7 @@ export default function Home() {
     "tile-6",
   ];
 
-  const handleScroll = (ref: RefObject<HTMLDivElement>) => {
+  const handleScroll = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current?.offsetTop) {
       window.scrollTo(0, ref.current.offsetTop);
     } else {
@@ -77,25 +78,26 @@ export default function Home() {
       </Head>
       <main
         className={`flex min-h-screen flex-col items-center justify-center scroll-smooth transition-all delay-150 ${
-          flip ? "bg-black text-white" : "bg-white"
+          flip ? " bg-black text-white" : "bg-white text-white"
         } `}
       >
+        <Stars number={20} />
         <div
           id="tile-1"
           ref={tileRef1}
-          className="container flex  h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
+          className="z-50 flex h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz cursor-pointer text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="cursor-pointer text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             Anthony Arellano
           </h1>
           <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz cursor-pointer text-4xl font-extrabold"
+            className="cursor-pointer text-4xl font-extrabold text-white"
           >
             Software Engineer
           </h2>
@@ -113,14 +115,14 @@ export default function Home() {
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             About
           </h1>
           {/* <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-4xl font-extrabold"
+            className=" text-4xl font-extrabold"
           >
             Software Engineer
           </h2> */}
@@ -133,14 +135,14 @@ export default function Home() {
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             Projects
           </h1>
           {/* <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-4xl font-extrabold"
+            className=" text-4xl font-extrabold"
           >
             Software Engineer
           </h2> */}
@@ -153,14 +155,14 @@ export default function Home() {
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             Music
           </h1>
           {/* <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-4xl font-extrabold"
+            className=" text-4xl font-extrabold"
           >
             Software Engineer
           </h2> */}
@@ -173,14 +175,14 @@ export default function Home() {
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             Resume
           </h1>
           {/* <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-4xl font-extrabold"
+            className=" text-4xl font-extrabold"
           >
             Software Engineer
           </h2> */}
@@ -193,19 +195,19 @@ export default function Home() {
           <h1
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
+            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
           >
             Contact
           </h1>
           {/* <h2
             onMouseEnter={() => setFlip(true)}
             onMouseLeave={() => setFlip(false)}
-            className="xyz text-4xl font-extrabold"
+            className=" text-4xl font-extrabold"
           >
             Software Engineer
           </h2> */}
         </div>
-        <div className="fixed bottom-5 flex gap-2 sm:gap-5">
+        <div className="fixed bottom-5 z-50 flex gap-2 sm:gap-5">
           <div
             onClick={() => handleScroll(tileRef1)}
             className={`cursor-pointer text-sm ${
