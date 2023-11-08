@@ -41,9 +41,9 @@ const GitHubIcon = ({ color }: { color: "white" | "black" }) => {
         <svg
           version="1.0"
           xmlns="http://www.w3.org/2000/svg"
-          width="230.000000pt"
-          height="225.000000pt"
-          viewBox="0 0 230.000000 225.000000"
+          width="35.000000pt"
+          height="35.000000pt"
+          viewBox="0 0 240.000000 240.000000"
           preserveAspectRatio="xMidYMid meet"
         >
           <g

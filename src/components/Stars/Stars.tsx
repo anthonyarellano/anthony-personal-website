@@ -8,8 +8,8 @@ const Stars: React.FC<StarsProps> = ({ number }) => {
   const starsArray = new Array(number).fill(0);
   return (
     <div className="stars background-star">
-      {starsArray.map((_) => (
-        <div className="star"></div>
+      {starsArray.map((_, i) => (
+        <div key={`star-${i}`} className="star"></div>
       ))}
     </div>
   );
