@@ -76,7 +76,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-center scroll-smooth bg-white text-white transition-all delay-150`}
+        className={`flex min-h-screen w-[100vw] flex-col items-center justify-center scroll-smooth bg-white text-white transition-all delay-150`}
       >
         <Stars number={20} />
         <div
