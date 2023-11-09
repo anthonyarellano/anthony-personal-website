@@ -185,7 +185,7 @@ export default function Home() {
           <h2 className="text-cut background-animation text-4xl font-extrabold text-yellow-200">
             {"(201) 686 4015"}
           </h2>
-          <div>
+          <div className="animate-bounce">
             <BMOIcon />
           </div>
         </div>
