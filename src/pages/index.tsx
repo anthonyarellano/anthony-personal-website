@@ -175,12 +175,12 @@ export default function Home() {
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Contact
           </h1>
-          <h2
+          <p
             onClick={() => window.open("mailto:theanthonyarellano@gmail.com")}
-            className="text-cut background-animation cursor-pointer text-4xl font-extrabold"
+            className="text-cut background-animation cursor-pointer break-all text-center text-4xl font-extrabold"
           >
             theanthonyarellano@gmail.com
-          </h2>
+          </p>
           <h2 className="text-cut background-animation text-4xl font-extrabold text-yellow-200">
             {"(201) 686 4015"}
           </h2>
