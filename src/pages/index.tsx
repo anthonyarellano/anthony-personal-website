@@ -6,7 +6,6 @@ import SpotifyIcon from "~/icons/Spotify";
 import LinkedinIcon from "~/icons/Linkedin";
 
 export default function Home() {
-  const [flip, setFlip] = React.useState(false);
   const [inView, setInView] = React.useState<string>();
 
   const tileRef1 = React.useRef<HTMLDivElement>(null);
@@ -77,9 +76,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-center scroll-smooth transition-all delay-150 ${
-          flip ? " bg-black text-white" : "bg-white text-white"
-        } `}
+        className={`flex min-h-screen flex-col items-center justify-center scroll-smooth bg-white text-white transition-all delay-150`}
       >
         <Stars number={20} />
         <div
@@ -90,7 +87,7 @@ export default function Home() {
           <h1 className="cursor-pointer text-center text-[5rem] font-extrabold tracking-tight text-white sm:text-[5rem]">
             Anthony Arellano
           </h1>
-          <h2 className="cursor-pointer text-center text-4xl font-extrabold text-white">
+          <h2 className="text-cut background-animation cursor-pointer text-center text-4xl font-extrabold text-white">
             Software Engineer
           </h2>
           <div className={`flex gap-2`}>
@@ -104,11 +101,7 @@ export default function Home() {
           ref={tileRef2}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
-          >
+          <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             About
           </h1>
           {/* <h2
@@ -124,11 +117,7 @@ export default function Home() {
           ref={tileRef3}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
-          >
+          <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Projects
           </h1>
           {/* <h2
@@ -144,11 +133,7 @@ export default function Home() {
           ref={tileRef4}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
-          >
+          <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Music
           </h1>
           {/* <h2
@@ -164,11 +149,7 @@ export default function Home() {
           ref={tileRef5}
           className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
-          >
+          <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Resume
           </h1>
           {/* <h2
@@ -182,22 +163,20 @@ export default function Home() {
         <div
           id="tile-6"
           ref={tileRef6}
-          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container z-50 flex  h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]"
-          >
+          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Contact
           </h1>
-          {/* <h2
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className=" text-4xl font-extrabold"
+          <h2
+            onClick={() => window.open("mailto:theanthonyarellano@gmail.com")}
+            className="text-cut background-animation cursor-pointer text-4xl font-extrabold"
           >
-            Software Engineer
-          </h2> */}
+            theanthonyarellano@gmail.com
+          </h2>
+          <h2 className="text-cut background-animation text-4xl font-extrabold text-yellow-200">
+            {"(201) 686 4015"}
+          </h2>
         </div>
         <div className="fixed bottom-5 z-50 flex gap-2 sm:gap-5">
           <div

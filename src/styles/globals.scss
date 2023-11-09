@@ -8,6 +8,12 @@
   }
 }
 
+.text-cut.background-animation {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
 .text-container {
   display: flex;
   justify-content: center;
