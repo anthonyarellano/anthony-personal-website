@@ -94,8 +94,8 @@ export default function Home() {
             Software Engineer
           </h2>
           <div className={`flex gap-2`}>
-            <GitHubIcon color="black" />
-            <LinkedinIcon />
+            <GitHubIcon color="white" />
+            <LinkedinIcon color="white" />
             <SpotifyIcon />
           </div>
         </div>
