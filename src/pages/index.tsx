@@ -4,6 +4,7 @@ import Stars from "~/components/Stars/Stars";
 import GitHubIcon from "~/icons/Github";
 import SpotifyIcon from "~/icons/Spotify";
 import LinkedinIcon from "~/icons/Linkedin";
+import BMOIcon from "~/icons/BMO";
 
 export default function Home() {
   const [inView, setInView] = React.useState<string>();
@@ -184,6 +185,9 @@ export default function Home() {
           <h2 className="text-cut background-animation text-4xl font-extrabold text-yellow-200">
             {"(201) 686 4015"}
           </h2>
+          <div>
+            <BMOIcon />
+          </div>
         </div>
         <div className="fixed bottom-5 z-50 flex gap-2 rounded-lg bg-gray-200/20 px-4 py-2 sm:gap-5">
           <div
