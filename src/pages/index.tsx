@@ -136,13 +136,22 @@ export default function Home() {
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Music
           </h1>
-          {/* <h2
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className=" text-4xl font-extrabold"
-          >
-            Software Engineer
-          </h2> */}
+          <div className="z-50 flex flex-row flex-wrap gap-2 sm:flex-nowrap">
+            <iframe
+              src="https://open.spotify.com/embed/artist/1Y3tB2Bs3lxbAA6HD2j6BW?utm_source=generator"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+            <iframe
+              src="https://open.spotify.com/embed/artist/76yRWpn2Qg8JHhVdhJbecC?utm_source=generator"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
         <div
           id="tile-5"
@@ -153,8 +162,6 @@ export default function Home() {
             Resume
           </h1>
           {/* <h2
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
             className=" text-4xl font-extrabold"
           >
             Software Engineer
@@ -178,7 +185,7 @@ export default function Home() {
             {"(201) 686 4015"}
           </h2>
         </div>
-        <div className="fixed bottom-5 z-50 flex gap-2 sm:gap-5">
+        <div className="fixed bottom-5 z-50 flex gap-2 rounded-lg bg-gray-200/20 px-4 py-2 sm:gap-5">
           <div
             onClick={() => handleScroll(tileRef1)}
             className={`cursor-pointer text-sm ${
