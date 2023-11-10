@@ -236,11 +236,11 @@ export default function Home() {
             <BMOIcon />
           </div>
         </div>
-        <div className="fixed bottom-5 z-50 flex gap-2 rounded-lg bg-gray-200/20 px-4 py-2 sm:gap-5">
+        <div className="fixed bottom-5 z-50 flex gap-2 rounded-lg bg-gray-200/100 px-4 py-2 text-black sm:gap-5">
           <div
             onClick={() => handleScroll(tileRef1)}
             className={`cursor-pointer text-sm ${
-              inView === "tile-1" ? "font-bold underline" : ""
+              inView === "tile-1" ? "font-bold underline decoration-wavy" : ""
             }`}
           >
             Home
@@ -248,7 +248,7 @@ export default function Home() {
           <div
             onClick={() => handleScroll(tileRef2)}
             className={`cursor-pointer text-sm ${
-              inView === "tile-2" ? "font-bold underline" : ""
+              inView === "tile-2" ? "font-bold underline decoration-wavy" : ""
             }`}
           >
             About
@@ -256,7 +256,7 @@ export default function Home() {
           <div
             onClick={() => handleScroll(tileRef3)}
             className={`cursor-pointer text-sm ${
-              inView === "tile-3" ? "font-bold underline" : ""
+              inView === "tile-3" ? "font-bold underline decoration-wavy" : ""
             }`}
           >
             Projects
@@ -264,7 +264,7 @@ export default function Home() {
           <div
             onClick={() => handleScroll(tileRef4)}
             className={`cursor-pointer text-sm ${
-              inView === "tile-4" ? "font-bold underline" : ""
+              inView === "tile-4" ? "font-bold underline decoration-wavy" : ""
             }`}
           >
             Music
@@ -272,7 +272,7 @@ export default function Home() {
           <div
             onClick={() => handleScroll(tileRef5)}
             className={`cursor-pointer text-sm ${
-              inView === "tile-5" ? "font-bold underline" : ""
+              inView === "tile-5" ? "font-bold underline decoration-wavy" : ""
             }`}
           >
             Resume
@@ -280,7 +280,7 @@ export default function Home() {
           <div
             onClick={() => handleScroll(tileRef6)}
             className={`cursor-pointer text-sm ${
-              inView === "tile-6" ? "font-bold underline" : ""
+              inView === "tile-6" ? "font-bold underline decoration-wavy" : ""
             }`}
           >
             Contact
