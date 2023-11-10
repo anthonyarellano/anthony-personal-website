@@ -5,6 +5,7 @@ import GitHubIcon from "~/icons/Github";
 import SpotifyIcon from "~/icons/Spotify";
 import LinkedinIcon from "~/icons/Linkedin";
 import BMOIcon from "~/icons/BMO";
+import ProjectCard from "~/components/ProjectCard/ProjectCard";
 
 export default function Home() {
   const [inView, setInView] = React.useState<string>();
@@ -116,23 +117,68 @@ export default function Home() {
         <div
           id="tile-3"
           ref={tileRef3}
-          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex  min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Projects
           </h1>
-          {/* <h2
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className=" text-4xl font-extrabold"
-          >
-            Software Engineer
-          </h2> */}
+          <div className="z-50 flex flex-wrap items-center justify-center gap-4">
+            <ProjectCard
+              title={"Cheetah"}
+              img={
+                "https://tonesbucket.s3.amazonaws.com/Screenshot+2023-11-09+191941.png"
+              }
+              description={
+                "A minimal run tracking web application geared towards users who desire a fuss free way of tracking their workouts."
+              }
+              url={"https://cheetah.vercel.app"}
+              technologies={[
+                "Next.js",
+                "Tailwind",
+                "tRPC",
+                "Drizzle ORM",
+                "NextAuth.js",
+                "PlanetScale",
+                "Vercel",
+              ]}
+            />
+            <ProjectCard
+              title={"Wanderer"}
+              img={"https://tonesbucket.s3.amazonaws.com/Capture.PNG"}
+              description={"An AirBnb web application clone."}
+              url={"https://wanderer-py.herokuapp.com"}
+              technologies={[
+                "React",
+                "Redux",
+                "Flask",
+                "Google Maps API",
+                "AWS S3",
+                "postgreSQL",
+              ]}
+            />
+            <ProjectCard
+              title={"Soundgarden"}
+              img={"https://tonesbucket.s3.amazonaws.com/Capture2.PNG"}
+              description={
+                "Gathering inspiration from Spotify and Soundcloud, Soundgarden is a music playing application aimed at promoting aspiring local artists."
+              }
+              url={"https://sound-garden.herokuapp.com"}
+              technologies={[
+                "React",
+                "Redux",
+                "Node.js",
+                "Express",
+                "Sequelize",
+                "AWS S3",
+                "postgreSQL",
+              ]}
+            />
+          </div>
         </div>
         <div
           id="tile-4"
           ref={tileRef4}
-          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Music
