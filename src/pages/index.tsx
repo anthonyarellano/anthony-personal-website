@@ -124,7 +124,7 @@ export default function Home() {
           </h1>
           <div className="z-50 flex flex-wrap items-center justify-center gap-4">
             <ProjectCard
-              title={"Cheetah"}
+              title={"Cheetah 🏃"}
               img={
                 "https://tonesbucket.s3.amazonaws.com/Screenshot+2023-11-09+191941.png"
               }
@@ -143,7 +143,7 @@ export default function Home() {
               ]}
             />
             <ProjectCard
-              title={"Wanderer"}
+              title={"Wanderer 🏠"}
               img={"https://tonesbucket.s3.amazonaws.com/Capture.PNG"}
               description={"An AirBnb web application clone."}
               url={"https://wanderer-py.herokuapp.com"}
@@ -157,7 +157,7 @@ export default function Home() {
               ]}
             />
             <ProjectCard
-              title={"Soundgarden"}
+              title={"Soundgarden 🎸"}
               img={"https://tonesbucket.s3.amazonaws.com/Capture2.PNG"}
               description={
                 "Gathering inspiration from Spotify and Soundcloud, Soundgarden is a music playing application aimed at promoting aspiring local artists."
