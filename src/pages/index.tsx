@@ -179,7 +179,7 @@ export default function Home() {
         <div
           id="tile-4"
           ref={tileRef4}
-          className="container flex h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Music
