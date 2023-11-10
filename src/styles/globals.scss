@@ -249,11 +249,12 @@
 
 .project-card {
   width: 300px;
-  height: 400px;
+  height: 450px;
   background-color: rgba(79, 89, 100, 0.5);
   margin-top: 30px;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .project-card:hover {

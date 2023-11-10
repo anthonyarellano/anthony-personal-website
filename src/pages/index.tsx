@@ -124,6 +124,7 @@ export default function Home() {
           </h1>
           <div className="z-50 flex flex-wrap items-center justify-center gap-4">
             <ProjectCard
+              construction
               title={"Cheetah 🏃"}
               img={
                 "https://tonesbucket.s3.amazonaws.com/Screenshot+2023-11-09+191941.png"
