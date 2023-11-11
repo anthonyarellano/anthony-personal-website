@@ -6,6 +6,7 @@ import SpotifyIcon from "~/icons/Spotify";
 import LinkedinIcon from "~/icons/Linkedin";
 import BMOIcon from "~/icons/BMO";
 import ProjectCard from "~/components/ProjectCard/ProjectCard";
+import ResumeCard from "~/components/ResumeCard/ResumeCard";
 
 export default function Home() {
   const [inView, setInView] = React.useState<string>();
@@ -204,11 +205,12 @@ export default function Home() {
         <div
           id="tile-5"
           ref={tileRef5}
-          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex  min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Resume
           </h1>
+          <ResumeCard />
           {/* <h2
             className=" text-4xl font-extrabold"
           >
