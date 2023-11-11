@@ -211,11 +211,6 @@ export default function Home() {
             Resume
           </h1>
           <ResumeCard />
-          {/* <h2
-            className=" text-4xl font-extrabold"
-          >
-            Software Engineer
-          </h2> */}
         </div>
         <div
           id="tile-6"
