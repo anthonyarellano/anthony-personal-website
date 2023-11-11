@@ -107,13 +107,15 @@ export default function Home() {
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             About
           </h1>
-          {/* <h2
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
-            className=" text-4xl font-extrabold"
-          >
-            Software Engineer
-          </h2> */}
+          <p className="z-50 text-xl font-extrabold">
+            My name is Anthony Arellano and I am currently a Full Stack Software
+            Engineer leading a web development team at Peloton Interactive. Our
+            main focus is on providing robust content tooling for internal
+            employees via rich and intuitive user interfaces. In my free time I
+            enjoy exploring bleeding edge web technologies, writing music, and
+            working towards my long term goal of running a marathon. Always open
+            to connect, so please feel free to reach out!
+          </p>
         </div>
         <div
           id="tile-3"
