@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Stars from "~/components/Stars/Stars";
 import GitHubIcon from "~/icons/Github";
 import SpotifyIcon from "~/icons/Spotify";
@@ -87,10 +88,10 @@ export default function Home() {
           ref={tileRef1}
           className="z-50 flex min-h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
-          <h1 className="cursor-pointer text-center text-[5rem] font-extrabold tracking-tight text-white sm:text-[5rem]">
+          <h1 className="text-center text-[5rem] font-extrabold tracking-tight text-white sm:text-[5rem]">
             Anthony Arellano
           </h1>
-          <h2 className="text-cut background-animation cursor-pointer text-center text-4xl font-extrabold text-white">
+          <h2 className="text-cut background-animation text-center text-4xl font-extrabold text-white">
             Software Engineer
           </h2>
           <div className={`flex gap-2`}>
@@ -102,11 +103,14 @@ export default function Home() {
         <div
           id="tile-2"
           ref={tileRef2}
-          className="container flex  min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container z-50 flex  min-h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             About
           </h1>
+          <div className="overflow-hidden rounded-lg">
+            <Image src="/me.jpg" alt="Profile Image" width={300} height={300} />
+          </div>
           <p className="z-50 text-xl font-extrabold">
             My name is Anthony Arellano and I am currently a Full Stack Software
             Engineer leading a web development team at Peloton Interactive. Our
@@ -120,7 +124,7 @@ export default function Home() {
         <div
           id="tile-3"
           ref={tileRef3}
-          className="container flex  min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex  min-h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Projects
@@ -182,7 +186,7 @@ export default function Home() {
         <div
           id="tile-4"
           ref={tileRef4}
-          className="container flex min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex min-h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Music
@@ -207,7 +211,7 @@ export default function Home() {
         <div
           id="tile-5"
           ref={tileRef5}
-          className="container flex  min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex  min-h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Resume
