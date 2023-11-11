@@ -85,7 +85,7 @@ export default function Home() {
         <div
           id="tile-1"
           ref={tileRef1}
-          className="z-50 flex h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
+          className="z-50 flex min-h-[100vh] flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="cursor-pointer text-center text-[5rem] font-extrabold tracking-tight text-white sm:text-[5rem]">
             Anthony Arellano
@@ -102,7 +102,7 @@ export default function Home() {
         <div
           id="tile-2"
           ref={tileRef2}
-          className="container flex  h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
+          className="container flex  min-h-[100vh] cursor-pointer flex-col items-center justify-center gap-12 px-4 py-16"
         >
           <h1 className="z-50 text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             About
