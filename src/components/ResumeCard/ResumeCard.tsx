@@ -8,7 +8,7 @@ const ResumeCard = () => (
       <p className="text-xl font-bold">{"Anthony's Resume"}</p>
     </div>
     <a
-      href="https://tonesbucket.s3.amazonaws.com/Anthony+Resume+11_19_2023.pdf"
+      href="https://tonesbucket.s3.amazonaws.com/Anthony+Resume+11_19_2023(1).pdf"
       download
       target={"_blank"}
     >
