@@ -132,23 +132,13 @@ export default function Home() {
           <div className="z-50 flex flex-wrap items-center justify-center gap-4">
             <ProjectCard
               construction
-              title={"Cheetah 🏃"}
-              img={
-                "https://tonesbucket.s3.amazonaws.com/Screenshot+2023-11-09+191941.png"
-              }
+              title={"runlite 🏃"}
+              img={"https://tonesbucket.s3.amazonaws.com/runlite_screensho.png"}
               description={
                 "A minimal run tracking web application geared towards users who desire a fuss free way of tracking their workouts."
               }
-              url={"https://cheetah.vercel.app"}
-              technologies={[
-                "Next.js",
-                "Tailwind",
-                "tRPC",
-                "Drizzle ORM",
-                "NextAuth.js",
-                "PlanetScale",
-                "Vercel",
-              ]}
+              url={"https://runlite.vercel.app"}
+              technologies={["Next.js", "StyleX", "Material UI", "Vercel"]}
             />
             <ProjectCard
               title={"Wanderer 🏠"}
