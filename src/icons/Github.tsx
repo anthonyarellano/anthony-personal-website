@@ -41,7 +41,7 @@ const GitHubIcon = ({ color }: { color: "white" | "black" }) => {
     );
   } else {
     return (
-      <a href="https://github.com/badjub1es" target="_blank">
+      <a href="https://github.com/anthonyarellano" target="_blank">
         <svg
           fill="#FFFFFF"
           xmlns="http://www.w3.org/2000/svg"
