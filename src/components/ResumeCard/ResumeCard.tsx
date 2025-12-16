@@ -5,7 +5,7 @@ const ResumeCard = () => (
   <div className="project-card flex flex-col gap-5 p-5">
     <div className="flex flex-row items-center justify-start gap-4">
       <GoogleDocIcon />
-      <p className="text-xl font-bold">{"Anthony's Resume"}</p>
+      <p className="text-xl font-bold">{" Anthony's Resume "}</p>
     </div>
     <a
       href="https://tonesbucket.s3.amazonaws.com/AnthonyArellanoResume.pdf"
