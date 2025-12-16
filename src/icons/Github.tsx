@@ -3,7 +3,7 @@ const GitHubIcon = ({ color }: { color: "white" | "black" }) => {
     return (
       <a
         className="flex items-center justify-center"
-        href="https://github.com/badjub1es"
+        href="https://github.com/anthonyarellano"
         target="_blank"
       >
         <div className="flex cursor-pointer items-center justify-center">
