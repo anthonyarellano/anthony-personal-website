@@ -12,7 +12,7 @@ export default function Home() {
             Senior Software Engineer
           </p>
           <p className="text-muted text-sm font-mono mb-10">
-            Peloton Interactive · Emerson, NJ
+            Peloton Interactive · Montclair, NJ
           </p>
           <nav className="flex gap-8 text-sm font-mono">
             <a
