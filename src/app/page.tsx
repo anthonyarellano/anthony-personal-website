@@ -1,7 +1,11 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-bg text-text font-sans">
-      <div className="max-w-2xl mx-auto px-6 py-24 md:py-32">
+    <main className="relative min-h-screen bg-bg text-text font-sans">
+      <div aria-hidden="true" className="grain" />
+      <div aria-hidden="true" className="glow-primary" />
+      <div aria-hidden="true" className="glow-secondary" />
+
+      <div className="relative z-10 max-w-2xl mx-auto px-6 py-24 md:py-32">
 
         {/* ── Hero ── */}
         <section className="mb-24">
